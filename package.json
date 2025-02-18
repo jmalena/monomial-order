@@ -1,0 +1,43 @@
+{
+  "name": "monomial",
+  "version": "0.1.0",
+  "description": "Monomial operations under various orderings, optionally restricted by modular arithmetic or degree constraints.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jmalena/monomial"
+  },
+  "keywords": [
+    "degree",
+    "enumeration",
+    "grlex",
+    "lex",
+    "math",
+    "mod",
+    "modulo",
+    "modular",
+    "monomial",
+    "ordering",
+    "polynomial",
+    "rank",
+    "unrank"
+  ],
+  "author": "Jonáš Malena <jonas.malena@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jmalena/monomial/issues"
+  },
+  "devDependencies": {
+    "@fast-check/jest": "^2.0.3",
+    "@types/jest": "^29.5.14",
+    "fast-check": "^3.23.2",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.7.3"
+  }
+}
