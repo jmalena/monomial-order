@@ -1,7 +1,7 @@
 {
   "name": "monomial",
   "version": "0.1.0",
-  "description": "Monomial operations under various orderings, optionally restricted by modular arithmetic or degree constraints.",
+  "description": "Fast monomial implementation with constraint support",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
