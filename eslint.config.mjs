@@ -8,7 +8,8 @@ import tsdocRequire from 'eslint-plugin-tsdoc-require';
 export default tseslint.config(
   {
     ignores: [
-      "**/dist",
+      '**/dist',
+      '**/docs',
     ]
   },
   {

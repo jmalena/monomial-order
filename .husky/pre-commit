@@ -4,3 +4,5 @@
 pnpm format
 pnpm lint
 pnpm test
+pnpm run docs
+git add docs
