@@ -11,7 +11,7 @@ type KTuple<K extends number, T> = K extends K
  * @param {KTuple<K, number>} u - The `k`-tuple whose rank is being found.
  * @returns {bigint} The 1-based rank of the `k`-tuple `u`.
  */
-export function rank<K extends number>(k: K, u: KTuple<K, number>): bigint {
+export function rank<K extends number>(_k: K, _u: KTuple<K, number>): bigint {
   throw new Error("Function not yet implemented.");
 }
 
@@ -25,8 +25,8 @@ export function rank<K extends number>(k: K, u: KTuple<K, number>): bigint {
  * @returns {KTuple<K, number>} The `k`-tuple corresponding to the given rank in the monomial ordering.
  */
 export function unrank<K extends number>(
-  k: K,
-  rank: bigint,
+  _k: K,
+  _rank: bigint,
 ): KTuple<K, number> {
   throw new Error("Function not yet implemented.");
 }
