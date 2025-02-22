@@ -20,7 +20,7 @@ export function factorial(n: number): bigint {
   return result;
 }
 
-// --------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
 // Combinations
 
 /**
@@ -46,7 +46,7 @@ export function choose(n: number, k: number): bigint {
   return factorial(n) / (factorial(k) * factorial(n - k));
 }
 
-// --------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
 // Stars and bars
 // @see {@link https://en.wikipedia.org/wiki/Stars_and_bars_(combinatorics)} Further up reading.
 

@@ -10,7 +10,7 @@
     "format": "prettier 'src/**/*.{js,json,ts}' --write",
     "lint": "eslint src",
     "prepare": "husky install",
-    "test": "jest"
+    "test": "jest --verbose"
   },
   "repository": {
     "type": "git",

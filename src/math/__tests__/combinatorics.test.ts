@@ -1,6 +1,6 @@
 import { test, fc } from "@fast-check/jest";
 import { factorial, choose, countStarsAndBars } from "/~/math/combinatorics";
-import { sum, permutationRep } from "/~/utils/array";
+import { sum, permutationRep, range } from "/~/utils/array";
 
 describe("factorial(n)", () => {
   test("throws error for n < 0", () => {
@@ -52,7 +52,7 @@ describe("choose(n, k)", () => {
 
 describe("countStarsAndBars", () => {
   function bruteforce(n: number, k: number, m: number): number {
-    const numerals = [...Array(m).keys()];
+    const numerals = range(m);
     return permutationRep(numerals, k).filter((num) => sum(num) === n).length;
   }
 
