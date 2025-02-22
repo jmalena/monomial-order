@@ -53,22 +53,22 @@ export function choose(n: number, k: number): bigint {
 /**
  * Count number of ways `n` things can be put into `k` bins, constrained by modulus `m`.
  *
- * Example:
- *   For parameters n = 4, k = 3, and m = 3, there are following configurations:
- *
- *     [ 0, 2, 2 ]
- *     [ 1, 1, 2 ]
- *     [ 1, 2, 1 ]
- *     [ 2, 0, 2 ]
- *     [ 2, 1, 1 ]
- *     [ 2, 2, 0 ]
- *
- *  therefore countStarsAndBars(4, 3, 3) = 6.
- *
  * @param n - The number of things (non-negative).
  * @param k - The number of bins (positive).
  * @param m - The modulus (≥ 2).
  * @returns Number of configurations.
+ *
+ * @example
+ * countStarsAndBars(4, 3, 3); // Returns 6
+ *
+ * // This is because for parameters n = 4, k = 3, m = 3, we have following configurations:
+ * //
+ * //  ||** **
+ * //  *|*|**
+ * //  *|**|*
+ * //  **||**
+ * //  **|*|*
+ * //  **|**|
  */
 export function countStarsAndBars(n: number, k: number, m: number): bigint {
   if (n < 0)
