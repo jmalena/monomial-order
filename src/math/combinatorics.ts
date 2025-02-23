@@ -3,7 +3,6 @@
  *
  * @param n - The non-negative number to compute the factorial for.
  * @returns The factorial of `n` (non-negative).
- * @throws When parameter conditios are not meet.
  */
 export function factorial(n: number): bigint {
   if (n < 0)
@@ -29,7 +28,6 @@ export function factorial(n: number): bigint {
  * @param n - The total number of items (non-negative).
  * @param k - The number of items to choose (non-negative).
  * @returns The number of ways to choose `k` items from `n` when items repetition is not allowed.
- * @throws When parameter conditios are not meet.
  */
 export function choose(n: number, k: number): bigint {
   if (n < 0)
