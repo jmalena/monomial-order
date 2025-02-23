@@ -15,7 +15,7 @@ import { Ordering } from "/~/orders";
  */
 export function rankLex(k: number, m: number, u: number[]): bigint {
   if (u.length !== k)
-    throw new Error(`Expected dimension ${k}, but got ${u.length}`);
+    throw new Error(`Expected ${k}-tuple, but got ${u.length}-tuple.`);
   if (m < 2)
     throw new Error(`Modulo must be greater than or equal to 2, but got ${m}`);
   if (u.some((num) => num < 0 || num >= m))

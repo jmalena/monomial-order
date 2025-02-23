@@ -1,6 +1,6 @@
 {
   "name": "monomial",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Fast monomial implementation with constraint support",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

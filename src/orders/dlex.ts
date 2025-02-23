@@ -37,7 +37,7 @@ export function rankDlex(d: number, k: number, m: number, u: number[]): bigint {
       `No ${k}-tuple modulo ${m} and degree ${d} can be constructed`,
     );
   if (u.length !== k)
-    throw new Error(`Expected dimension ${k}, but got ${u.length}.`);
+    throw new Error(`Expected ${k}-tuple, but got ${u.length}-tuple.`);
   if (degree(u) !== d)
     throw new Error(`Expected degree ${d}, but got ${degree(u)}.`);
   if (m < 2)
