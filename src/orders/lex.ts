@@ -1,6 +1,5 @@
 /**
- * Monomial lexicographic order (lex) operations on k-tuples u modulo m.
- *
+ * @file Monomial lexicographic order operations on k-tuples modulo m.
  * @see {@link https://en.wikipedia.org/wiki/Monomial_order#Lexicographic_order} Further up reading.
  */
 
@@ -43,7 +42,7 @@ export function rankLex(k: number, m: number, u: number[]): bigint {
 export function unrankLex(k: number, m: number, rank: bigint): number[] {
   if (m < 2)
     throw new Error(`Modulo must be greater than or equal to 2, but got ${m}`);
-  if (rank < 1n || rank > rankLexMax(k, m))
+  if (rank < 1n || rank > maxLexRank(k, m))
     throw new Error(
       `A ${k}-tuple modulo ${m} does not exist for a rank of ${rank}`,
     );
@@ -67,7 +66,7 @@ export function unrankLex(k: number, m: number, rank: bigint): number[] {
  * @param m - The tuple modulus.
  * @returns Maximal rank given parameters.
  */
-export function rankLexMax(k: number, m: number): bigint {
+export function maxLexRank(k: number, m: number): bigint {
   if (k < 0)
     throw new Error(`Tuple dimension must be non-negative, but got ${k}`);
   if (m < 2)
@@ -83,9 +82,9 @@ export function rankLexMax(k: number, m: number): bigint {
  * @param m - The modulo.
  * @returns A random valid rank for given parameters.
  */
-export function rankLexRandom(k: number, m: number): bigint {
-  // TODO: this will probably not work with BigInt...
-  return 1n + BigInt(Math.floor(Math.random() * Number(rankLexMax(k, m))));
+export function randomLexRank(k: number, m: number): bigint {
+  // TODO: this will not work with large numbers…
+  return 1n + BigInt(Math.floor(Math.random() * Number(maxLexRank(k, m))));
 }
 
 /**
@@ -95,9 +94,9 @@ export function rankLexRandom(k: number, m: number): bigint {
  * @param v - `k`-tuple `v` of rhs.
  * @returns Comparison result.
  */
-export function lexCompare(u: number[], v: number[]): Ordering {
+export function compareLex(u: number[], v: number[]): Ordering {
   if (u.length !== v.length)
-    throw new Error(`Tuples ${u} and ${v} differ in length.`);
+    throw new Error(`Tuples ${u} and ${v} must have same length.`);
 
   for (let i = 0; i < u.length; i++) {
     if (u[i] < v[i]) return Ordering.LT;

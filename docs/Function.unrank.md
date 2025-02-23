@@ -4,7 +4,7 @@
 
 > **unrank**\<`K`\>(`_k`, `_rank`): `KTuple`\<`K`, `number`\>
 
-Defined in: [index.ts:25](https://github.com/jmalena/monomial/blob/2d415ea6b1fb28aa433d2de3a05c459d3e56aa63/src/index.ts#L25)
+Defined in: [index.ts:25](https://github.com/jmalena/monomial/blob/1638ff5c9241e55dbf9abc285b76ef3a69177640/src/index.ts#L25)
 
 Finds the `k`-tuple `u` corresponding to a given rank within the specified monomial ordering.
 The rank is the position of `k`-tuple `u` in the monomial ordering of all possible `k`-tuples.
