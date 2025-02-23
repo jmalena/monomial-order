@@ -64,8 +64,7 @@ export function unrankGrlex(k: number, m: number, rank: bigint): number[] {
   while (true) {
     const count = countStarsAndBars(d, k, m);
 
-    if (count == 0n || rank <= count) {
-      // TODO: clean up this shit, probably rank <= count not needed, or the other term
+    if (rank <= count) {
       break;
     }
 
