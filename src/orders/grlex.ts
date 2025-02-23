@@ -22,7 +22,7 @@ export function rankGrlex(k: number, m: number, u: number[]): bigint {
     throw new Error(`Expected dimension ${k}, but got ${u.length}`);
   if (m < 2)
     throw new Error(`Modulo must be greater than or equal to 2, but got ${m}`);
-  if (u.every((num) => num < 0 || num >= m))
+  if (u.some((num) => num < 0 || num >= m))
     throw new Error(
       `Each element of the ${k}-tuple u=${u} must be within the range [0, ${m - 1}].`,
     );
