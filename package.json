@@ -1,6 +1,6 @@
 {
   "name": "monomial",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Fast monomial implementation with constraint support",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -9,7 +9,7 @@
     "docs": "typedoc",
     "format": "prettier 'src/**/*.{js,json,ts}' --write",
     "lint": "eslint src",
-    "prepare": "husky install",
+    "prepare": "npm run build && husky install",
     "test": "jest --verbose"
   },
   "repository": {
