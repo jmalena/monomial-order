@@ -9,7 +9,7 @@
     "docs": "typedoc",
     "format": "prettier 'src/**/*.{js,json,ts}' --write",
     "lint": "eslint src",
-    "prepare": "husky install",
+    "prepare": "tsc && husky install",
     "test": "jest --verbose"
   },
   "repository": {

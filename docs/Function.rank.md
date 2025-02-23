@@ -2,26 +2,30 @@
 
 # Function: rank()
 
-> **rank**\<`K`\>(`_k`, `_u`): `bigint`
+> **rank**(`order`, `k`, `u`): `bigint`
 
-Defined in: [index.ts:13](https://github.com/jmalena/monomial/blob/605ce55249a479f3d83fce4f1d46fafd017df4df/src/index.ts#L13)
+Defined in: [index.ts:11](https://github.com/jmalena/monomial/blob/2bb18875914db655a36ced0a9786547056e433fc/src/index.ts#L11)
 
-Finds the rank of the `k`-tuple `u` within the given monomial ordering.
+Finds the rank (1-based) of the `k`-tuple `u` within the given monomial ordering.
 The rank is the position of `k`-tuple `u` in the monomial ordering of all possible `k`-tuples.
-
-## Type Parameters
-
-• **K** *extends* `number`
 
 ## Parameters
 
-### \_k
+### order
 
-`K`
+`Order`
 
-### \_u
+### k
 
-`KTuple`\<`K`, `number`\>
+`number`
+
+The length of the searched `k`-tuple `u`.
+
+### u
+
+`number`[]
+
+The `k`-tuple whose rank is being searched.
 
 ## Returns
 
