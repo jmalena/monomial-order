@@ -94,6 +94,8 @@ describe("Lexicographical monomial order of k-tuples u modulo m with degree d", 
   );
 
   /*
+   * Property `rank_1` < `rank_2` => unrankDlex(rank1; d, k, m) <_dlex unrankDlex(rank2; d, k, m),
+   *
    * NOTE: This test is doing exhaustive check on specific parameters `d`, `k`, and `m`. Be careful with the max value of `k` since it can eat lot of time or memory.
    */
   test.prop([
