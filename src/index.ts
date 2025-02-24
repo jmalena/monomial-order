@@ -14,7 +14,7 @@ type Order = "lex" | "grlex";
  */
 interface OrderConstraints {
   /**
-   * Constraint for the tuple length.
+   * Constraint for the tuple given length.
    */
   length: number;
 
@@ -22,6 +22,12 @@ interface OrderConstraints {
    * Constraint on the exponent upper range. This represents the modulus value.
    */
   mod: number;
+
+  /**
+   * Constraint monomials with exact degree.
+   * TODO: add support and uncomment related section in the README.md after
+   */
+  // deg: number;
 }
 
 /**

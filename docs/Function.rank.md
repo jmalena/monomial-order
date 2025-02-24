@@ -4,7 +4,7 @@
 
 > **rank**(`order`, `u`, `c`): `bigint`
 
-Defined in: [index.ts:36](https://github.com/jmalena/monomial/blob/2fd30fed996803077a8aaaee894126ec2c1f2862/src/index.ts#L36)
+Defined in: [index.ts:42](https://github.com/jmalena/monomial/blob/edfd1be5dabff441cdca5c794832580f122d1d43/src/index.ts#L42)
 
 Returns the rank (1-based) of the `k`-tuple `u` within the given monomial order under constraints `c`.
 
