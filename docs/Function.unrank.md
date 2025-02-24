@@ -4,7 +4,7 @@
 
 > **unrank**(`order`, `rank`, `c`): `number`[]
 
-Defined in: [index.ts:54](https://github.com/jmalena/monomial/blob/e31096fed3e4f9ccc9a9d55d4e7c87b40ae20fdb/src/index.ts#L54)
+Defined in: [index.ts:54](https://github.com/jmalena/monomial/blob/7805158df8d8aa76f59bdcc97645b6bd584a8f1d/src/index.ts#L54)
 
 Returns the `k`-tuple `u` corresponding to a given `rank` (1-based) within the given monomial order under constraints `c`.
 
