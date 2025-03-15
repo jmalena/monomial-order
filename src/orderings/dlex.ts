@@ -1,9 +1,9 @@
 /**
- * @file Monomial lexicographic order operations on k-tuples modulo m with degree d.
+ * @file Monomial lexicographic ordering operations on k-tuples modulo m with degree d.
  */
 
-import { compareLex } from "/~/orders/lex";
-import { Ordering } from "/~/orders";
+import { compareLex } from "/~/orderings/lex";
+import { Ordering } from "/~/orderings";
 import { degree } from "/~/math/tuple";
 import { countStarsAndBars } from "/~/math/combinatorics";
 
@@ -113,7 +113,7 @@ export function unrankDlex(
 }
 
 /**
- * Maximal lexicographic order rank of `k`-tuples modulo `m` with degree `d`.
+ * Maximal lexicographic ordering rank of `k`-tuples modulo `m` with degree `d`.
  *
  * @param d - The degree constraint.
  * @param k - The tuple dimension.
@@ -130,7 +130,7 @@ export function randomDlexRank(d: number, k: number, m: number): bigint {
 }
 
 /**
- * Lexicographic order `k`-tuple comparison.
+ * Lexicographic ordering `k`-tuple comparison.
  *
  * @param u - `k`-tuple `u` of lhs.
  * @param v - `k`-tuple `v` of rhs.

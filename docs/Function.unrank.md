@@ -2,19 +2,19 @@
 
 # Function: unrank()
 
-> **unrank**(`order`, `rank`, `c`): `number`[]
+> **unrank**(`ordering`, `rank`, `c`): `number`[]
 
-Defined in: [index.ts:60](https://github.com/jmalena/monomial/blob/cb4adf9eef484926e83882c47a7261e594623f9d/src/index.ts#L60)
+Defined in: [index.ts:66](https://github.com/jmalena/monomial/blob/9436c55c924419a6691cae4b665e86f5f1b5e441/src/index.ts#L66)
 
-Returns the `k`-tuple `u` corresponding to a given `rank` (1-based) within the given monomial order under constraints `c`.
+Returns the `k`-tuple `u` corresponding to a given `rank` (1-based) within the given monomial ordering under constraints `c`.
 
 ## Parameters
 
-### order
+### ordering
 
-`Order`
+`Ordering`
 
-The monomial order.
+The monomial ordering.
 
 ### rank
 
@@ -24,12 +24,12 @@ The 1-based rank of the `k`-tuple `u`.
 
 ### c
 
-`OrderConstraints`
+`OrderingConstraints`
 
-The constraints applied on the monomial order.
+The constraints applied on the monomial ordering.
 
 ## Returns
 
 `number`[]
 
-The `k`-tuple corresponding to the `rank` in the given monomial order.
+The `k`-tuple corresponding to the `rank` in the given monomial ordering.

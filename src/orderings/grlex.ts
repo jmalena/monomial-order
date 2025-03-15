@@ -1,11 +1,11 @@
 /**
- * @file Monomial graded lexicographic order operations on k-tuples modulo m.
+ * @file Monomial graded lexicographic ordering operations on k-tuples modulo m.
  * @see {@link https://en.wikipedia.org/wiki/Monomial_order#Graded_lexicographic_order} Further up reading.
  */
 
-import { Ordering } from "/~/orders";
-import { compareLex } from "/~/orders/lex";
-import { rankDlex, unrankDlex } from "/~/orders/dlex";
+import { Ordering } from "/~/orderings";
+import { compareLex } from "/~/orderings/lex";
+import { rankDlex, unrankDlex } from "/~/orderings/dlex";
 import { countStarsAndBars } from "/~/math/combinatorics";
 import { degree } from "/~/math/tuple";
 
@@ -77,7 +77,7 @@ export function unrankGrlex(k: number, m: number, rank: bigint): number[] {
 }
 
 /**
- * Maximal rank of `k`-tuples modulo `m` in graded lexicographic order.
+ * Maximal rank of `k`-tuples modulo `m` in graded lexicographic ordering.
  *
  * @param k - The tuple dimension.
  * @param m - The tuple modulus.
@@ -105,7 +105,7 @@ export function randomGrlexRank(k: number, m: number): bigint {
 }
 
 /**
- * Graded lexicographic order `k`-tuple comparison.
+ * Graded lexicographic ordering `k`-tuple comparison.
  *
  * @param u - `k`-tuple `u` of lhs.
  * @param v - `k`-tuple `v` of rhs.

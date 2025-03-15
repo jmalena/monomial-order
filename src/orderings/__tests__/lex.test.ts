@@ -5,13 +5,13 @@ import {
   maxLexRank,
   randomLexRank,
   compareLex,
-} from "/~/orders/lex";
-import { Ordering } from "/~/orders";
+} from "/~/orderings/lex";
+import { Ordering } from "/~/orderings";
 import { range, permutationRep } from "/~/utils/array";
 
-describe("Lexicographical monomial order of k-tuples modulo m", () => {
+describe("Lexicographical monomial ordering of k-tuples modulo m", () => {
   /**
-   * Enumerate all `k`-tuples modulo `m` in lexicographic order.
+   * Enumerate all `k`-tuples modulo `m` in lexicographic ordering.
    */
   function enumerateLex(k: number, m: number): number[][] {
     return permutationRep(range(m), k).sort((u, v) => compareLex(u, v));
@@ -41,7 +41,7 @@ describe("Lexicographical monomial order of k-tuples modulo m", () => {
   );
 
   test.prop([fc.integer({ min: 1, max: 8 }), fc.integer({ min: 2, max: 16 })])(
-    "unrankLex(rank; k, m) maintains lexicographic order",
+    "unrankLex(rank; k, m) maintains lexicographic ordering",
     (k, m) => {
       const rank1 = randomLexRank(k, m);
       const rank2 = randomLexRank(k, m);
@@ -92,7 +92,7 @@ describe("Lexicographical monomial order of k-tuples modulo m", () => {
     fc.integer({ min: 1, max: 4 }),
     fc.integer({ min: 1, max: 16 }), // be careful with the max value, can eat up lot of time/memory
   ])(
-    "unrankLex(rank; d, k, m) is strictly monotone (has lexicographic order)",
+    "unrankLex(rank; d, k, m) is strictly monotone (has lexicographic ordering)",
     (k, m) => {
       const tuples = enumerateLex(k, m);
 
@@ -104,7 +104,7 @@ describe("Lexicographical monomial order of k-tuples modulo m", () => {
     },
   );
 
-  test.skip("rankLex(u; d, k, m) is strictly monotone (has lexicographic order)", () => {
+  test.skip("rankLex(u; d, k, m) is strictly monotone (has lexicographic ordering)", () => {
     // TODO: If unrankLex(rank; d, k, m) is strictly monotone and bijective, then rankLex(u; d, k, m) is strictly monotone
   });
 

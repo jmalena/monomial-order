@@ -1,18 +1,18 @@
-import { rankLex, unrankLex } from "/~/orders/lex";
-import { rankGrlex, unrankGrlex } from "/~/orders/grlex";
+import { rankLex, unrankLex } from "/~/orderings/lex";
+import { rankGrlex, unrankGrlex } from "/~/orderings/grlex";
 
 /**
- * Supported monomial orders:
- *   `lex`: Lexicographical order, where the rank is determined in a dictionary-like manner.
- *   `grlex`: Graded lexicographical order, where the rank is based on the degree first, then lexicographically.
+ * Supported monomial orderings:
+ *   `lex`: Lexicographical ordering, where the rank is determined in a dictionary-like manner.
+ *   `grlex`: Graded lexicographical ordering, where the rank is based on the degree first, then lexicographically.
  */
-type Order = "lex" | "grlex";
+type Ordering = "lex" | "grlex";
 
 /**
- * Constraints for order operations. This affect the monomial ranks.
+ * Constraints for ordering operations. This affect the monomial ranks.
  * @interface
  */
-interface OrderConstraints {
+interface OrderingConstraints {
   /**
    * Constraint for the tuple given length.
    */
@@ -31,42 +31,50 @@ interface OrderConstraints {
 }
 
 /**
- * Returns the rank (1-based) of the `k`-tuple `u` within the given monomial order under constraints `c`.
+ * Returns the rank (1-based) of the `k`-tuple `u` within the given monomial ordering under constraints `c`.
  *
- * @param order - The monomial order.
+ * @param ordering - The monomial ordering.
  * @param k - The length of the tuple `u`.
  * @param u - The `k`-tuple whose rank is being requested.
- * @param c - The constraints applied on the monomial order.
+ * @param c - The constraints applied on the monomial ordering.
  * @returns The 1-based rank of the `k`-tuple `u`.
  */
-export function rank(order: Order, u: number[], c: OrderConstraints): bigint {
-  if (order === "lex") {
+export function rank(
+  ordering: Ordering,
+  u: number[],
+  c: OrderingConstraints,
+): bigint {
+  if (ordering === "lex") {
     return rankLex(c.length, c.mod, u);
-  } else if (order === "grlex") {
+  } else if (ordering === "grlex") {
     return rankGrlex(c.length, c.mod, u);
   }
 
-  throw new Error(`Unsupported or unknwon monomial order "${order}" given.`);
+  throw new Error(
+    `Unsupported or unknwon monomial ordering "${ordering}" given.`,
+  );
 }
 
 /**
- * Returns the `k`-tuple `u` corresponding to a given `rank` (1-based) within the given monomial order under constraints `c`.
+ * Returns the `k`-tuple `u` corresponding to a given `rank` (1-based) within the given monomial ordering under constraints `c`.
  *
- * @param order - The monomial order.
+ * @param ordering - The monomial ordering.
  * @param rank - The 1-based rank of the `k`-tuple `u`.
- * @param c - The constraints applied on the monomial order.
- * @returns The `k`-tuple corresponding to the `rank` in the given monomial order.
+ * @param c - The constraints applied on the monomial ordering.
+ * @returns The `k`-tuple corresponding to the `rank` in the given monomial ordering.
  */
 export function unrank(
-  order: Order,
+  ordering: Ordering,
   rank: bigint,
-  c: OrderConstraints,
+  c: OrderingConstraints,
 ): number[] {
-  if (order === "lex") {
+  if (ordering === "lex") {
     return unrankLex(c.length, c.mod, rank);
-  } else if (order === "grlex") {
+  } else if (ordering === "grlex") {
     return unrankGrlex(c.length, c.mod, rank);
   }
 
-  throw new Error(`Unsupported or unknwon monomial order "${order}" given.`);
+  throw new Error(
+    `Unsupported or unknwon monomial ordering "${ordering}" given.`,
+  );
 }

@@ -5,13 +5,13 @@ import {
   unrankGrlex,
   randomGrlexRank,
   compareGrlex,
-} from "/~/orders/grlex";
-import { Ordering } from "/~/orders";
+} from "/~/orderings/grlex";
+import { Ordering } from "/~/orderings";
 import { range, permutationRep } from "/~/utils/array";
 
-describe("Graded lexicographical monomial order of k-tuples modulo m", () => {
+describe("Graded lexicographical monomial ordering of k-tuples modulo m", () => {
   /**
-   * Enumerate all `k`-tuples modulo `m` in graded lexicographic order.
+   * Enumerate all `k`-tuples modulo `m` in graded lexicographic ordering.
    */
   function enumerateGrlex(k: number, m: number): number[][] {
     return permutationRep(range(m), k).sort((u, v) => compareGrlex(u, v));
@@ -76,7 +76,7 @@ describe("Graded lexicographical monomial order of k-tuples modulo m", () => {
    * NOTE: This test is doing exhaustive check on specific parameters `k` and `m`. Be careful with the max value of `k` since it can eat lot of time or memory.
    */
   test.prop([fc.integer({ min: 1, max: 4 }), fc.integer({ min: 1, max: 16 })])(
-    "unrankGrlex(rank; k, m) is strictly monotone (has graded lexicographic order)",
+    "unrankGrlex(rank; k, m) is strictly monotone (has graded lexicographic ordering)",
     (k, m) => {
       const tuples = enumerateGrlex(k, m);
 
@@ -88,7 +88,7 @@ describe("Graded lexicographical monomial order of k-tuples modulo m", () => {
     },
   );
 
-  test.skip("rankGrlex(u; d, k, m) is strictly monotone (has graded lexicographic order)", () => {
+  test.skip("rankGrlex(u; d, k, m) is strictly monotone (has graded lexicographic ordering)", () => {
     // TODO: If unrankLex(rank; d, k, m) is strictly monotone and bijective, then rankLex(u; d, k, m) is strictly monotone
   });
 

@@ -1,12 +1,12 @@
 /**
- * @file Monomial lexicographic order operations on k-tuples modulo m.
+ * @file Monomial lexicographic ordering operations on k-tuples modulo m.
  * @see {@link https://en.wikipedia.org/wiki/Monomial_order#Lexicographic_order} Further up reading.
  */
 
-import { Ordering } from "/~/orders";
+import { Ordering } from "/~/orderings";
 
 /**
- * Computes the lexicographic order rank from `k`-tuple `u` modulo `m`.
+ * Computes the lexicographic ordering rank from `k`-tuple `u` modulo `m`.
  *
  * @param k - The dimension of `u`.
  * @param m - The modulo of `u`.
@@ -60,7 +60,7 @@ export function unrankLex(k: number, m: number, rank: bigint): number[] {
 }
 
 /**
- * Maximal rank of `k`-tuples modulo `m` in lexicographic order.
+ * Maximal rank of `k`-tuples modulo `m` in lexicographic ordering.
  *
  * @param k - The tuple dimension.
  * @param m - The tuple modulus.
@@ -88,7 +88,7 @@ export function randomLexRank(k: number, m: number): bigint {
 }
 
 /**
- * Lexicographic order `k`-tuple comparison.
+ * Lexicographic ordering `k`-tuple comparison.
  *
  * @param u - `k`-tuple `u` of lhs.
  * @param v - `k`-tuple `v` of rhs.

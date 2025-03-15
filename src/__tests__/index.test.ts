@@ -1,15 +1,15 @@
 import { rank, unrank } from "/~/index";
 
-describe("Monomial order ranking", () => {
-  test("rank(order, u, c) throws error when given `order` is unsupported", () => {
+describe("Monomial ordering ranking", () => {
+  test("rank(ordering, u, c) throws error when given `ordering` is unsupported", () => {
     // @ts-expect-error Disable type checking to simulate environment without Typescript
     expect(() => rank("chaos", [0], { length: 1, mod: 2 })).toThrow(
-      'Unsupported or unknwon monomial order "chaos" given.',
+      'Unsupported or unknwon monomial ordering "chaos" given.',
     );
   });
 
   test("rank('lex', u, c) is valid for small subset of values", () => {
-    // Lex order enumeration for k=3 and m=2:
+    // Lex ordering enumeration for k=3 and m=2:
     //
     // [0, 0, 0]
     // [0, 0, 1]
@@ -26,7 +26,7 @@ describe("Monomial order ranking", () => {
   });
 
   test("rank('grlex', u, c) is valid for small subset of values", () => {
-    // Grlex order enumeration for k=3 and m=2:
+    // Grlex ordering enumeration for k=3 and m=2:
     //
     // [0, 0, 0]
     // [0, 0, 1]
@@ -42,16 +42,16 @@ describe("Monomial order ranking", () => {
     expect(rank("grlex", [0, 1, 1], { length: 3, mod: 2 })).toBe(5n);
   });
 });
-describe("Monomial order unranking", () => {
-  test("unrank(order, rank, c) throws error when given `order` is unsupported", () => {
+describe("Monomial ordering unranking", () => {
+  test("unrank(ordering, rank, c) throws error when given `ordering` is unsupported", () => {
     // @ts-expect-error Disable type checking to simulate environment without Typescript
     expect(() => unrank("chaos", 1n, { length: 2, mod: 2 })).toThrow(
-      'Unsupported or unknwon monomial order "chaos" given.',
+      'Unsupported or unknwon monomial ordering "chaos" given.',
     );
   });
 
   test("unrank('lex', rank, c) is valid for small subset of values", () => {
-    // Lex order enumeration for k=3 and m=2:
+    // Lex ordering enumeration for k=3 and m=2:
     //
     // [0, 0, 0]
     // [0, 0, 1]
@@ -68,7 +68,7 @@ describe("Monomial order unranking", () => {
   });
 
   test("unrank('grlex', rank, c) is valid for small subset of values", () => {
-    // Grlex order enumeration for k=3 and m=2:
+    // Grlex ordering enumeration for k=3 and m=2:
     //
     // [0, 0, 0]
     // [0, 0, 1]

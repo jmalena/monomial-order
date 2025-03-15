@@ -5,14 +5,14 @@ import {
   maxDlexRank,
   randomDlexRank,
   compareDlex,
-} from "/~/orders/dlex";
-import { Ordering } from "/~/orders";
+} from "/~/orderings/dlex";
+import { Ordering } from "/~/orderings";
 import { degree } from "/~/math/tuple";
 import { range, permutationRep } from "/~/utils/array";
 
-describe("Lexicographical monomial order of k-tuples u modulo m with degree d", () => {
+describe("Lexicographical monomial ordering of k-tuples u modulo m with degree d", () => {
   /**
-   * Enumerate all `k`-tuples modulo `m` with degree `d` in lexicographic order.
+   * Enumerate all `k`-tuples modulo `m` with degree `d` in lexicographic ordering.
    */
   function enumerateDlex(d: number, k: number, m: number): number[][] {
     return permutationRep(range(m), k)
@@ -103,7 +103,7 @@ describe("Lexicographical monomial order of k-tuples u modulo m with degree d", 
     fc.integer({ min: 1, max: 4 }),
     fc.integer({ min: 2, max: 16 }),
   ])(
-    "unrankDlex(rank; d, k, m) is strictly monotone (has lexicographic order)",
+    "unrankDlex(rank; d, k, m) is strictly monotone (has lexicographic ordering)",
     (d, k, m) => {
       fc.pre(maxDlexRank(d, k, m) > 0);
 
@@ -117,11 +117,11 @@ describe("Lexicographical monomial order of k-tuples u modulo m with degree d", 
     },
   );
 
-  test.skip("unrankDlex(u; d, k, m) is strictly monotone (has lexicographic order)", () => {
+  test.skip("unrankDlex(u; d, k, m) is strictly monotone (has lexicographic ordering)", () => {
     // TODO: If unrankDlex(rank; d, k, m) is strictly monotone and bijective, then rankDlex(u; d, k, m) is strictly monotone
   });
 
-  test.skip("rankDlex(u; d, k, m) is strictly monotone (has lexicographic order)", () => {
+  test.skip("rankDlex(u; d, k, m) is strictly monotone (has lexicographic ordering)", () => {
     // TODO: If unrankDlex(rank; d, k, m) is strictly monotone and bijective, then rankDlex(u; d, k, m) is strictly monotone
   });
 

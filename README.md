@@ -41,8 +41,8 @@ const u: number[] = [1, 0, 2];
 
 Following monomial orderings are currently available:
 
-* Lexicographic Order (lex)
-* Graded Lexicographic Order (grlex)
+* Lexicographic Ordering (lex)
+* Graded Lexicographic Ordering (grlex)
 
 and more of them will be supported in the future. Within this orderings, you can use performant [`rank`](https://github.com/jmalena/monomial/blob/main/docs/Function.rank.md) and [`unrank`](https://github.com/jmalena/monomial/blob/main/docs/Function.unrank.md) operations, supporting various constraints.
 
@@ -69,7 +69,7 @@ Restrict your scope to monomials $u$ having exponent smaller than $m$. In this c
 *This will be added soon*.
 
 <!--
-Allows only monomials $á$ such that $deg(u) = d$. For parameters $k = 3$ and $d = 2$ under grlex order, we have:
+Allows only monomials $á$ such that $deg(u) = d$. For parameters $k = 3$ and $d = 2$ under grlex ordering, we have:
 
 ```typescript
 [0, 0, 2] // Rank 1
