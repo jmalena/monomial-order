@@ -1,10 +1,10 @@
-[monomial](../wiki/globals) / unrank
+[monomial-order](../wiki/globals) / unrank
 
 # Function: unrank()
 
 > **unrank**(`ordering`, `rank`, `c`): `number`[]
 
-Defined in: [index.ts:66](https://github.com/jmalena/monomial/blob/9436c55c924419a6691cae4b665e86f5f1b5e441/src/index.ts#L66)
+Defined in: [index.ts:66](https://github.com/jmalena/monomial-order/blob/c2e19d19c9d2e5f1ab04a42d1e136f616b0c8b7f/src/index.ts#L66)
 
 Returns the `k`-tuple `u` corresponding to a given `rank` (1-based) within the given monomial ordering under constraints `c`.
 

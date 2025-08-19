@@ -1,7 +1,7 @@
 {
-  "name": "monomial",
+  "name": "monomial-order",
   "version": "0.2.0",
-  "description": "Fast monomial implementation with constraint support",
+  "description": "Package for finding monomial orders, with optional constraint support.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -14,27 +14,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jmalena/monomial.git"
+    "url": "git+https://github.com/jmalena/monomial-order.git"
   },
   "keywords": [
-    "degree",
-    "enumeration",
-    "grlex",
-    "lex",
     "math",
-    "mod",
-    "modulo",
-    "modular",
-    "monomial",
+    "ranking",
     "ordering",
-    "polynomial",
-    "rank",
-    "unrank"
+    "monomial"
   ],
   "author": "Jonáš Malena <jonas.malena@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jmalena/monomial/issues"
+    "url": "https://github.com/jmalena/monomial-order/issues"
   },
   "devDependencies": {
     "@eslint/js": "^9.20.0",

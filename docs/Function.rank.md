@@ -1,10 +1,10 @@
-[monomial](../wiki/globals) / rank
+[monomial-order](../wiki/globals) / rank
 
 # Function: rank()
 
 > **rank**(`ordering`, `u`, `c`): `bigint`
 
-Defined in: [index.ts:42](https://github.com/jmalena/monomial/blob/9436c55c924419a6691cae4b665e86f5f1b5e441/src/index.ts#L42)
+Defined in: [index.ts:42](https://github.com/jmalena/monomial-order/blob/c2e19d19c9d2e5f1ab04a42d1e136f616b0c8b7f/src/index.ts#L42)
 
 Returns the rank (1-based) of the `k`-tuple `u` within the given monomial ordering under constraints `c`.
 

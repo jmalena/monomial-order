@@ -1,11 +1,11 @@
-# monomial
+# monomial-order
 
-Package providing functionality for working with monomials, including operations under various constraints.
+Package for finding monomial orders, with optional constraint support.
 
 ## Install
 
 ```sh
-$ npm install --save monomial
+$ npm install --save monomial-order
 ```
 
 ## What is monomial?

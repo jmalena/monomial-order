@@ -1,4 +1,4 @@
-# monomial
+# monomial-order
 
 ## Functions
 
